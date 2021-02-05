@@ -1,0 +1,4 @@
+﻿<Table TableName="SOOrderType">
+    <Column TableName="SOOrderType" ColumnName="UsrFreeItemCtrl" ColumnType="bool" AllowNull="True" MaxLength="25" DecimalPrecision="2" IsNewColumn="True" IsUnicode="True" />
+    <Column TableName="SOOrderType" ColumnName="UsrDisableFreeItemCtrl" ColumnType="bool" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+</Table>

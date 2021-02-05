@@ -1,0 +1,8 @@
+﻿<Actions ScreenID="PO302000">
+    <Action IsActive="True" ActionName="printPurchaseReturn" ActionType="R" DestinationScreenID="PO646010" DisplayName="Print Purchase Return" DisableCondition="9810497f-b4c6-4b5f-b3f2-6265707f81bd" BatchMode="False" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <Param IsActive="True" Value="[ReceiptType]" ActionName="printPurchaseReturn" Name="ReceiptType" FromSchema="False" />
+        <Param IsActive="True" Value="[ReceiptNbr]" ActionName="printPurchaseReturn" Name="ReceiptNbr" FromSchema="False" />
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+</Actions>

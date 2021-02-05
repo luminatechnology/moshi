@@ -1,0 +1,5 @@
+﻿<Conditions screen="PO302000">
+    <AutomationScreenCondition ConditionID="9810497f-b4c6-4b5f-b3f2-6265707f81bd" ScreenID="PO302000" ConditionName="IsNotReturn" Order="1" AppendSystemCondition="False" JoinMethod="AND" InvertCondition="False">
+        <FilterRow LineNbr="1" CloseBrackets="0" OpenBrackets="0" FieldName="ReceiptType" Condition="2" Operator="0" Value2="" Value="RN" IsActive="True" IsFromScheme="True" />
+    </AutomationScreenCondition>
+</Conditions>

@@ -1,0 +1,13 @@
+﻿<Page path="~/pages/so/so502000.aspx" pageSource="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">
+    <PXGridLevel DataMember="Records" ParentId="phG_grid_Levels#0" TypeFullName="PX.Web.UI.PXGridLevel">
+        <Children Key="Columns">
+            <AddItem>
+                <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
+                    <Prop Key="DataField" Value="UsrShipContactAtten" />
+                    <Prop Key="Width" Value="280" />
+                </PXGridColumn>
+            </AddItem>
+            <PXGridColumn DataField="RequestDate" OriginalIndex="6" />
+        </Children>
+    </PXGridLevel>
+</Page>

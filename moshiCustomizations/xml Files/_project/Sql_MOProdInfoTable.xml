@@ -1,0 +1,54 @@
+﻿<Sql TableName="MOProdInfoTable" TableSchemaXml="#CDATA">
+    <CDATA name="TableSchemaXml"><![CDATA[<table name="MOProdInfoTable">
+  <col name="CompanyID" type="Int" default="Zero" />
+  <col name="InventoryID" type="Int" />
+  <col name="P1_ProdLen_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P1_ProdWdth_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P1_ProdHgt_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P1_ProdWgt_grams" type="Decimal(10,4)" nullable="true" />
+  <col name="P1_ProdLen_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P1_ProdWdth_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P1_ProdHgt_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P1_ProdWgt_lbs" type="Decimal(12,4)" nullable="true" />
+  <col name="P2_PkgLen_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P2_PkgWdth_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P2_PkgHgt_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P2_PkgWgt_Ipd_grams" type="Decimal(13,4)" nullable="true" />
+  <col name="P2_PkgLen_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P2_PkgWdth_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P2_PkgHgt_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P2_PkgWgt_Ipd_lbs" type="Decimal(12,4)" nullable="true" />
+  <col name="P2_Pkg_PlasticWgt_grams" type="Decimal(13,4)" nullable="true" />
+  <col name="P2_Pkg_PaperWgt_grams" type="Decimal(12,4)" nullable="true" />
+  <col name="P3_CtnLen_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P3_CtnWdth_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P3_CtnHgt_cm" type="Decimal(6,2)" nullable="true" />
+  <col name="P3_CtnWgt_kg" type="Decimal(12,4)" nullable="true" />
+  <col name="P3_CtnLen_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P3_CtnWdth_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P3_CtnHgt_inch" type="Decimal(12,4)" nullable="true" />
+  <col name="P3_CtnWgt_lbs" type="Decimal(12,4)" nullable="true" />
+  <col name="P6_MasterPackQty" type="NVarChar(1024)" nullable="true" />
+  <col name="P6_PkgContent" type="NVarChar(1024)" nullable="true" />
+  <col name="P6_PkgVersion" type="NVarChar(1024)" nullable="true" />
+  <col name="P6_CountryofOrigin" type="NVarChar(2)" nullable="true" />
+  <col name="P6_ProdMaterial" type="NVarChar(1024)" nullable="true" />
+  <col name="Published" type="Bit" nullable="true" />
+  <col name="CreatedByID" type="UniqueIdentifier" />
+  <col name="CreatedByScreenID" type="Char(8)" />
+  <col name="CreatedDateTime" type="DateTime" />
+  <col name="LastModifiedByID" type="UniqueIdentifier" />
+  <col name="LastModifiedByScreenID" type="Char(8)" />
+  <col name="LastModifiedDateTime" type="DateTime" />
+  <col name="tstamp" type="Timestamp" />
+  <col name="NoteID" type="UniqueIdentifier" />
+  <index name="MOProdInfoTable_NoteID" unique="true">
+    <col name="NoteID" />
+    <col name="CompanyID" />
+  </index>
+  <index name="PK_MOProdInfoTable" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
+    <col name="InventoryID" />
+  </index>
+</table>]]></CDATA>
+</Sql>

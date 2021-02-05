@@ -1,0 +1,114 @@
+﻿<Actions ScreenID="SO303000">
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="initializeState" ActionType="G" After="Last" BatchMode="False" WindowMode="S" HideCondition="True" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="release" ActionType="G" After="initializeState" MassProcessingScreen="SO505000" BatchMode="True" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="post" ActionType="G" After="release" MassProcessingScreen="SO505000" BatchMode="True" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="putOnHold" ActionType="G" After="post" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields>
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="Hold" ActionName="putOnHold" IsFromScheme="True" Value="True" StateActionFieldLineNbr="0" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="releaseFromHold" ActionType="G" After="putOnHold" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields>
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="Hold" ActionName="releaseFromHold" IsFromScheme="True" Value="False" StateActionFieldLineNbr="0" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="putOnCreditHold" ActionType="G" After="releaseFromHold" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields>
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="CreditHold" ActionName="putOnCreditHold" IsFromScheme="True" Value="True" StateActionFieldLineNbr="0" />
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="ApprovedCredit" ActionName="putOnCreditHold" IsFromScheme="True" Value="False" StateActionFieldLineNbr="1" />
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="ApprovedCreditAmt" ActionName="putOnCreditHold" IsFromScheme="True" Value="0" StateActionFieldLineNbr="2" />
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="ApprovedCaptureFailed" ActionName="putOnCreditHold" IsFromScheme="True" Value="False" StateActionFieldLineNbr="3" />
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="ApprovedPrepaymentRequired" ActionName="putOnCreditHold" IsFromScheme="True" Value="False" StateActionFieldLineNbr="4" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="releaseFromCreditHold" ActionType="G" After="putOnCreditHold" MassProcessingScreen="SO505000" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields>
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="CreditHold" ActionName="releaseFromCreditHold" IsFromScheme="True" Value="False" StateActionFieldLineNbr="0" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="emailInvoice" ActionType="G" After="releaseFromCreditHold" MassProcessingScreen="SO505000" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields>
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="Emailed" ActionName="emailInvoice" IsFromScheme="True" Value="True" StateActionFieldLineNbr="0" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="recalculateDiscountsAction" ActionType="G" After="emailInvoice" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="writeOff" ActionType="G" After="recalculateDiscountsAction" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="reclassifyBatch" ActionType="G" After="writeOff" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="payInvoice" ActionType="G" After="reclassifyBatch" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="cancelInvoice" ActionType="G" After="payInvoice" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="correctInvoice" ActionType="G" After="cancelInvoice" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="createAndCapturePayment" ActionType="G" After="correctInvoice" MassProcessingScreen="SO505000" BatchMode="False" MenuFolderType="19" WindowMode="S" HideCondition="True" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="validateAddresses" ActionType="G" After="createAndCapturePayment" BatchMode="False" MenuFolderType="19" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="arEdit" ActionType="G" After="validateAddresses" BatchMode="False" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" ActionName="printInvoice" ActionType="G" After="arEdit" MassProcessingScreen="SO505000" BatchMode="True" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <StateActionFields>
+            <StateActionField IsActive="True" IsSystem="True" IsCustomized="False" IsCustomizedRecursive="False" FieldName="Printed" ActionName="printInvoice" IsFromScheme="True" Value="True" StateActionFieldLineNbr="0" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" ActionName="printCommercialInv" ActionType="R" AfterInMenu="printGUIInvoice" DestinationScreenID="SO643040" DisplayName="Print Commercial Invoice" MassProcessingScreen="SO505000" BatchMode="False" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <Param IsActive="True" Value="[DocType]" ActionName="printCommercialInv" Name="DocType" FromSchema="False" />
+        <Param IsActive="True" Value="[RefNbr]" ActionName="printCommercialInv" Name="RefNbr" FromSchema="False" />
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" ActionName="printCreditNote" ActionType="R" AfterInMenu="printCommercialInv2" DestinationScreenID="SO643030" DisplayName="Print Credit Note" BatchMode="False" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <Param IsActive="True" Value="[DocType]" ActionName="printCreditNote" Name="DocType" FromSchema="False" />
+        <Param IsActive="True" Value="[RefNbr]" ActionName="printCreditNote" Name="RefNbr" FromSchema="False" />
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" ActionName="printGUIInvoice" ActionType="R" AfterInMenu="printInvoice" DestinationScreenID="TW601000" DisplayName="Print GUI Invoice" DisableCondition="9d944d94-659a-4b71-91b7-1f8a81bf0c01" BatchMode="False" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <Param IsActive="True" Value="[InternalDocType]" ActionName="printGUIInvoice" Name="DocType" FromSchema="False" />
+        <Param IsActive="True" Value="[RefNbr]" ActionName="printGUIInvoice" Name="RefNbr" FromSchema="False" />
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+    <Action IsActive="True" ActionName="printCommercialInv2" ActionType="R" AfterInMenu="printCommercialInv" DestinationScreenID="SO643041" DisplayName="Print Commercial Invoice (Sales)" MassProcessingScreen="SO505000" BatchMode="False" MenuFolderType="21" WindowMode="S" DisablePersist="False">
+        <Param IsActive="True" Value="[DocType]" ActionName="printCommercialInv2" Name="DocType" FromSchema="False" />
+        <Param IsActive="True" Value="[RefNbr]" ActionName="printCommercialInv2" Name="RefNbr" FromSchema="False" />
+        <StateActionFields />
+        <StateActionParams />
+    </Action>
+</Actions>

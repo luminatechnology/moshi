@@ -1,0 +1,169 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>moshiCustomizations</RootNamespace>
+    <AssemblyName>moshiCustomizations</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <WarningLevel>3</WarningLevel>
+    <FileVersion>20.203.0028</FileVersion>
+    <InformationalVersion>20.203.0028</InformationalVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\..\Bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\..\Bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\..\Bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\..\Bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common">
+      <HintPath>..\..\..\..\Bin\PX.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.CS.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="PX.Data">
+      <HintPath>..\..\..\..\Bin\PX.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Fluent">
+      <HintPath>..\..\..\..\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.DbServices">
+      <HintPath>..\..\..\..\Bin\PX.DbServices.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Export">
+      <HintPath>..\..\..\..\Bin\PX.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects">
+      <HintPath>..\..\..\..\Bin\PX.Objects.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Objects.AM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\PX.Objects.AM.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Reports">
+      <HintPath>..\..\..\..\Bin\PX.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAC_Extensions\SOLineExtensions.cs" />
+    <Compile Include="DAC_Extensions\SOOrderProcessSelectedExtensions.cs" />
+    <Compile Include="DAC_Extensions\SOOrderTypeExtensions.cs" />
+    <Compile Include="DAC_Extensions\SOPackageDetailExtensions.cs" />
+    <Compile Include="DAC_Extensions\SOSetupExtensions.cs" />
+    <Compile Include="DAC_Extensions\SOShipLineExtensions.cs" />
+    <Compile Include="DAC_Extensions\SOShipmentExtensions.cs" />
+    <Compile Include="Descriptor\ExportReportToExcel.cs" />
+    <Compile Include="Graph\MOShipmentTrkMaint.cs" />
+    <Compile Include="Graph\MOSOOrderProcess.cs" />
+    <Compile Include="Graph\MOUploadFile2SOInvProc.cs" />
+    <Compile Include="Graph\MOUploadFileByInventProc.cs" />
+    <Compile Include="Graph_Extensions\BusinessAccountMaint.cs" />
+    <Compile Include="Graph_Extensions\CustomerMaint.cs" />
+    <Compile Include="Graph_Extensions\InventoryItemMaint.cs" />
+    <Compile Include="Graph_Extensions\MoveEntry.cs" />
+    <Compile Include="Graph_Extensions\POReceiptEntry.cs" />
+    <Compile Include="Graph_Extensions\SOInvoiceShipment.cs" />
+    <Compile Include="Graph_Extensions\SOOrderEntry.cs" />
+    <Compile Include="Graph_Extensions\SOOrderEntry_ApprovalWorkflow.cs" />
+    <Compile Include="Graph_Extensions\SOOrderTypeMaint.cs" />
+    <Compile Include="Graph_Extensions\SOShipmentEntry.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DAC\MOProdInfoTable.cs" />
+    <Compile Include="Graph\MOProductInfoEntry.cs" />
+    <Compile Include="Graph\MOShipTrackingProc.cs" />
+    <Compile Include="Graph_Extensions\SOInvoiceEntry.cs" />
+    <Compile Include="Graph_Extensions\ARInvoiceEntry.cs" />
+    <Compile Include="Graph_Extensions\CREmailActivityMaint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\PX.Api.Webhooks.dll.config" />
+    <None Include="bin\Debug\PX.Data.BQL.Fluent.dll.config" />
+    <None Include="bin\Debug\PX.Objects.FS.dll.config" />
+    <None Include="bin\Debug\PX.SiteMap.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\moshiCustomizations.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\moshiCustomizations.dll" />
+    <Content Include="bin\Debug\moshiCustomizations.pdb" />
+    <Content Include="bin\Debug\PX.Api.Webhooks.dll" />
+    <Content Include="bin\Debug\PX.Api.Webhooks.pdb" />
+    <Content Include="bin\Debug\PX.CS.Contracts.dll" />
+    <Content Include="bin\Debug\PX.CS.Contracts.pdb" />
+    <Content Include="bin\Debug\PX.Data.BQL.Fluent.dll" />
+    <Content Include="bin\Debug\PX.Data.BQL.Fluent.pdb" />
+    <Content Include="bin\Debug\PX.Data.BQL.Fluent.xml" />
+    <Content Include="bin\Debug\PX.Export.dll" />
+    <Content Include="bin\Debug\PX.Export.pdb" />
+    <Content Include="bin\Debug\PX.Objects.AM.dll" />
+    <Content Include="bin\Debug\PX.Objects.AM.pdb" />
+    <Content Include="bin\Debug\PX.Objects.FS.dll" />
+    <Content Include="bin\Debug\PX.Objects.FS.pdb" />
+    <Content Include="bin\Debug\PX.SiteMap.dll" />
+    <Content Include="bin\Debug\PX.SiteMap.pdb" />
+    <Content Include="bin\Debug\PX.Web.Customization.dll" />
+    <Content Include="bin\Debug\PX.Web.Customization.MSILEdit.dll" />
+    <Content Include="bin\Debug\PX.Web.Customization.MSILEdit.pdb" />
+    <Content Include="bin\Debug\PX.Web.Customization.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

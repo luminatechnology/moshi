@@ -1,0 +1,4 @@
+﻿<AutomationScreenCondition ConditionID="30a5c14d-f475-4213-b653-3bbbd9abb188" ScreenID="AR301000" ConditionName="IsCredit" Order="2" AppendSystemCondition="False" JoinMethod="AND" InvertCondition="False">
+    <FilterRow LineNbr="1" CloseBrackets="0" OpenBrackets="0" FieldName="DocType" Condition="1" Operator="0" Value2="" Value="CRM" IsActive="True" IsFromScheme="True" />
+    <FilterRow LineNbr="2" CloseBrackets="0" OpenBrackets="0" FieldName="RefNbr" Condition="13" Operator="0" Value2="" Value="" IsActive="True" IsFromScheme="True" />
+</AutomationScreenCondition>

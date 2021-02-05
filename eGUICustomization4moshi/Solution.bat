@@ -1,0 +1,1 @@
+"C:\Program Files\Acumatica ERP\moshi\App_Data\Projects\eGUICustomization4moshi\eGUICustomization4moshi.sln"

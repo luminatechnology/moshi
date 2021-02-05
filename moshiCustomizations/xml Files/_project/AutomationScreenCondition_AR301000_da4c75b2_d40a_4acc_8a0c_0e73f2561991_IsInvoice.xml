@@ -1,0 +1,4 @@
+﻿<AutomationScreenCondition ConditionID="da4c75b2-d40a-4acc-8a0c-0e73f2561991" ScreenID="AR301000" ConditionName="IsInvoice" Order="1" AppendSystemCondition="False" JoinMethod="AND" InvertCondition="False">
+    <FilterRow LineNbr="1" CloseBrackets="0" OpenBrackets="0" FieldName="DocType" Condition="1" Operator="0" Value2="" Value="INV" IsActive="True" IsFromScheme="True" />
+    <FilterRow LineNbr="2" CloseBrackets="0" OpenBrackets="0" FieldName="RefNbr" Condition="13" Operator="0" Value2="" Value="" IsActive="True" IsFromScheme="True" />
+</AutomationScreenCondition>
