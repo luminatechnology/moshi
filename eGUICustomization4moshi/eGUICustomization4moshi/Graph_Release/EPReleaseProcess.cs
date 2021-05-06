@@ -28,7 +28,7 @@ namespace PX.Objects.EP
 
                 Vendor vendor = new Vendor();
 
-                foreach (TWNManualGUIExpense manualGUIExp in graph.GetExtension<ExpenseClaimEntry_Extension>().manGUIExpense.Cache.Cached)
+                foreach (TWNManualGUIExpense manualGUIExp in SelectFrom<TWNManualGUIExpense>.Where<TWNManualGUIExpense.refNbr.IsEqual<@P.AsString>>.View.Select(Base, claim.RefNbr))
                 {
                     if (PXCache<Tax>.GetExtension<TaxExt>(Tax.PK.Find(Base, manualGUIExp.TaxID)).UsrTWNGUI == false) { continue; }
 
