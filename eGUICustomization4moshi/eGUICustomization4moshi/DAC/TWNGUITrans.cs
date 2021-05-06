@@ -9,6 +9,7 @@ using eGUICustomization4moshi.Descriptor;
 using Messages = PX.Objects.TX.Messages;
 using static PX.Objects.AR.ARInvoiceEntry_Extension;
 using static eGUICustomization4moshi.Descriptor.TWNStringList;
+using SearchCategory = PX.Objects.SM.SearchCategory;
 
 namespace eGUICustomization4moshi.DAC
 {
@@ -180,9 +181,10 @@ namespace eGUICustomization4moshi.DAC
         #region CustVend
         [PXDBString(20, IsUnicode = true)]
         [PXUIField(DisplayName = "Cust/Vend")]
-        [PXSelector(typeof(Search<PX.Objects.CR.BAccount.acctCD, 
-                                  Where<PX.Objects.CR.BAccount.type.IsEqual<PX.Objects.CR.BAccountType.customerType>
-                                        .Or<PX.Objects.CR.BAccount.type.IsEqual<PX.Objects.CR.BAccountType.vendorType>>>>),
+        [PXSelector(typeof(Search<PX.Objects.CR.BAccount.acctCD,
+                                  Where<PX.Objects.CR.BAccount.type.IsIn<PX.Objects.CR.BAccountType.customerType,
+                                                                         PX.Objects.CR.BAccountType.vendorType,
+                                                                         PX.Objects.CR.BAccountType.employeeType>>>),
                     typeof(PX.Objects.CR.BAccount.acctName))]
         public virtual string CustVend { get; set; }
         public abstract class custVend : PX.Data.BQL.BqlString.Field<custVend> { }
