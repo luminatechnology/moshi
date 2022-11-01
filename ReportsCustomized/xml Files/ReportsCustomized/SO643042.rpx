@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report Name="report1">
+<Report version="" Name="report1">
   <CommonSettings>
     <PdfCompressed>False</PdfCompressed>
     <ViewPdf>True</ViewPdf>
@@ -29,12 +29,14 @@
   </Filters>
   <MailSettings>
     <ActivitySource>SOShipment.NoteID</ActivitySource>
+    <Bcc></Bcc>
     <Body>='您好#010;#010;附件為今天的出口報關文件,做G502#010;感謝#010;注意：若Execl打開檔案時提示檔案格式與指定不同，請點選「是」即可開啟檔案。#010;請勿回覆這封系統傳送的電子郵件，如有疑問請洽尚宏相關人員。#010;#010;'#010;+[BAccount.AcctName] + '\n'#010;+IIf([CompanyAddress.AddressLine1]&lt;&gt; null, [CompanyAddress.AddressLine1], '')#010;+IIf([CompanyAddress.AddressLine2]&lt;&gt;null,[CompanyAddress.AddressLine2],'')#010;+IIf([CompanyAddress.City]&lt;&gt;null, [CompanyAddress.City] + ', ','')#010;+IIf([CompanyAddress.City]&lt;&gt;null And [CompanyAddress.State]&lt;&gt;null, ', ', '')#010;+IIf([CompanyAddress.State]&lt;&gt;null,[CompanyAddress.State],'')#010;+IIf([CompanyAddress.PostalCode]&lt;&gt;null And [CompanyAddress.State]&lt;&gt;null, ', ', '')#010;+IIf([CompanyAddress.PostalCode]&lt;&gt;null,[CompanyAddress.PostalCode],'')#010;+IIf([CompanyAddress.CountryID]&lt;&gt;null, [CompanyAddress.CountryID_Country_description] + '\n', '')#010;+IIf([CompanyContact.Phone1] &lt;&gt; null, 'TEL: ' + [CompanyContact.Phone1] + '\n', '')#010;+IIf([CompanyContact.Fax] &lt;&gt; null, '  FAX: ' + [CompanyContact.Fax], '')</Body>
     <Cc>='operations.tw@moshi.com'</Cc>
     <Format>Excel</Format>
     <ParentSource>Customer.NoteID</ParentSource>
     <Subject>='尚宏電子 - #' + [SOShipment.UsrTrackingNbr]</Subject>
-    <To>='upsabc@ups.com;upsabc@gmail.com;lshez@ups.com'</To>
+    <TemplateID></TemplateID>
+    <To>='upsabc@ups.com;upsabc@gmail.com;mayyang@ups.com;yroy@ups.com;lisawong@ups.com'</To>
   </MailSettings>
   <Parameters>
     <ReportParameter>
@@ -4523,6 +4525,7 @@
       <FullName>PX.Objects.SO.SOShipment</FullName>
     </ReportTable>
   </Tables>
+  <Version></Version>
   <ViewerFields>
     <ViewerField Name="ARInvoice.DocType"></ViewerField>
     <ViewerField Name="ARInvoice.RefNbr"></ViewerField>
@@ -4593,7 +4596,6 @@
       <Visible>False</Visible>
     </PageHeader>
     <Detail Name="detailSection1">
-      <GridSize>4px, 4px</GridSize>
       <Height>1.26984cm</Height>
       <Variables>
         <ReportVariable>
@@ -4604,7 +4606,6 @@
       </Variables>
       <Items>
         <Panel Name="panel4">
-          <GridSize>8px, 8px</GridSize>
           <Location>0px, 0px</Location>
           <Size>696px, 48px</Size>
           <StyleName>Bottom Line</StyleName>
